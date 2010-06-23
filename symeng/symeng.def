@@ -1,0 +1,76 @@
+EXPORTS
+	; common routines
+	halloc
+	hfree
+	hCheckLeaks
+	xstrdup
+	xstrstrskip
+	xstrreplacechar
+	HashPbCb
+	MapExistingFileA
+	MapExistingFileW
+	
+	; MSF routines
+	MsfOpen
+	MsfClose
+	MsfLoadStream
+	MsfReferenceStream
+	MsfSizeOfStream
+	MsfDereferenceStream
+	MsfGetStreamPointers
+	
+	; TPI routines
+	TPILoadTypeInfo
+	TPILookupTypeRecord
+	TPILookupTypeName
+	TPIGetSymbolDeclaration
+	TPIDumpTypes
+	TPIFreeTypeInfo
+	
+	; SYM routines
+	SYMLoadSymbols
+	SYMUnloadSymbols
+	SYMGetSymFromAddr
+	SYMFreeSymbol
+	SYMDumpSymbols
+	SYMNextSym
+	
+	; GSI routines
+	GSINearestSym
+	GSIFindExact
+	GSIEnumAll
+	SYMByName
+	GSIByName
+	
+	; Sym engine
+	RtlGetModuleBase
+	SymSetSymbolPath
+	SymFindLoadedSymbolsForImage
+	SymLoadSymbolsForImage
+	SymUnloadSymbols
+	SymUnloadAll
+	SymFromAddress
+	SymFreeSymbol
+	SymNextSym
+	SymDownloadFromServerPdb
+	SymDecompressPdb
+	SymDownloadFromServerForImage
+	SymSetPrintfCallout
+	SymLoadSymbolsForImageFile
+
+	; PDB generic routines
+	PdbOpen
+	PdbOpenValidate
+	PdbOpenForImage
+	PdbOpenForImageFile
+	PdbClose
+	PdbGetImageSignatureAndPath
+	PdbFindMatchingPdbForImage
+	PdbFindMatchingPdbForImageFile
+	PdbGetLastError
+	PdbSetLastError
+	PdbGetErrorDescription
+	
+	; temporary exported statics and internals
+	SympFindBestOffsetInMatchingSection
+	
