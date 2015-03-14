@@ -1,12 +1,9 @@
-#pragma once
+#ifndef SYMENGLIB_TPI_H
+#define SYMENGLIB_TPI_H
 
 #include "msf.h"
+#include <stdio.h>
 
-VOID TPIDumpTypes (PHDR pHdr);
 
-char *TPILookupTypeName (PHDR pHdr, ULONG typeIndex);
-PlfRecord TPILookupTypeRecord (PHDR pHdr, ULONG typeIndex, ULONG *pdBase, ULONG *pdSize);
-PHDR TPILoadTypeInfo (MSF *msf);
-char* TPIGetSymbolDeclaration (PHDR pHdr, char *szTypeName, char *szVarName);
-VOID TPIDumpTypes (PHDR pHdr);
-VOID TPIFreeTypeInfo (MSF* msf, PHDR hdr);
+
+#endif // SYMENGLIB_TPI_H
