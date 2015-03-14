@@ -5,7 +5,7 @@ platform: x64
 before_build:
 - md build
 - cd build
-- cmake -G"Visual Studio 12 Win64"
+- cmake -G "Visual Studio 12 Win64" ..
 build:
   project: C:\projects\gunmetalbackupgooglecode\build\pdbparser.sln
   verbosity: minimal
