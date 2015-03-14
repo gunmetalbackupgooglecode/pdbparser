@@ -29,11 +29,11 @@ set(libs
 
 # Compiler definitions
 
-#if (OPTION_BUILD_STATIC)
-#    add_definitions("-D${META_PROJECT_NAME_UPPER}_STATIC")
-#else()
-#    add_definitions("-DFIBLIB_EXPORTS")
-#endif()
+if (OPTION_BUILD_STATIC)
+    add_definitions("-D${META_PROJECT_NAME_UPPER}_STATIC")
+else()
+    add_definitions("-DSYMENGLIB_EXPORTS")
+endif()
 
 
 # Sources
@@ -50,6 +50,7 @@ set(api_includes
      ${include_path}/pdb_info.h
      ${include_path}/sym.h
      ${include_path}/tpi.h
+     ${include_path}/symenglib_api.h
 )
 
 set(sources
