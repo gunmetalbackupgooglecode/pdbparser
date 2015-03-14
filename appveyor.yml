@@ -1,0 +1,11 @@
+version: 1.0.0.{build}
+os: Unstable
+configuration: Release
+platform: x64
+before_build:
+- md build
+- cd build
+- cmake -G"Visual Studio 12 Win64"
+build:
+  project: C:\projects\gunmetalbackupgooglecode\build\pdbparser.sln
+  verbosity: minimal
