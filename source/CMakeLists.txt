@@ -9,6 +9,7 @@ configure_file(template-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/template-versio
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/common")
 
 # Libraries
 set(IDE_FOLDER "")
