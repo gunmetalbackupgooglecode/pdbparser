@@ -16,8 +16,8 @@ set(IDE_FOLDER "")
 add_subdirectory(symenglib)
 
 # Applications
-# set(IDE_FOLDER "Applications")
-# add_subdirectory(fibcmd)
+ set(IDE_FOLDER "Applications")
+add_subdirectory(pdbparser-console)
 
 # Tests
 #set(IDE_FOLDER "Tests")
