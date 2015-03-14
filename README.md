@@ -1,4 +1,4 @@
-https://travis-ci.org/gunmetalbackupgooglecode/pdbparser.svg?branch=master
+[![Build Status](https://travis-ci.org/gunmetalbackupgooglecode/pdbparser.svg?branch=master)](https://travis-ci.org/gunmetalbackupgooglecode/pdbparser)
 
 This is a portable PDB parsing library (language: C) suitable for user-mode Win32 and kernel-mode code.
 
