@@ -4,7 +4,7 @@
 
 
 
-This is a portable PDB parsing library (language: C) suitable for user-mode Win32 and kernel-mode code.
+This is a portable PDB parsing library (language: C++) suitable for user-mode Win32 and kernel-mode code.
 
 TODO (linux)
 TODO rewrite to c++
