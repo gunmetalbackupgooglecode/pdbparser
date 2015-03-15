@@ -1,6 +1,1 @@
-[submodule "deps/googlemock"]
-	path = deps/googlemock
-	url = https://github.com/gunmetalbackupgooglecode/googlemock.git
-[submodule "deps/gtest"]
-	path = deps/gtest
-	url = https://github.com/gunmetalbackupgooglecode/googletest.git
+
