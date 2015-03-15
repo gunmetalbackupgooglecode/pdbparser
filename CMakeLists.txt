@@ -157,10 +157,6 @@ endif()
 # "create_revision_file (...)" is defined in cmake/GitRevision.cmake
 create_revision_file(${CMAKE_BINARY_DIR}/revision ${INSTALL_ROOT})
 
-if (OPTION_BUILD_TESTS)
-#add_subdirectory(${CMAKE_SOURCE_DIR}/deps/gtest)
-add_subdirectory(${CMAKE_SOURCE_DIR}/deps/googlemock)
-endif()
 
 
 add_subdirectory(source)

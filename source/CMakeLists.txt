@@ -20,5 +20,5 @@ add_subdirectory(symenglib)
 add_subdirectory(pdbparser-console)
 
 # Tests
-#set(IDE_FOLDER "Tests")
-#add_subdirectory(tests)
+set(IDE_FOLDER "Tests")
+add_subdirectory(tests)

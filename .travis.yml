@@ -19,14 +19,15 @@ before_install:
   - cmake . -DBUILD_SHARED_LIBS=true
   - make
   - cd ..
-  - cd googletest
+  - cd gtest
   - cmake . -DBUILD_SHARED_LIBS=true
   - make
   - cd ..
 
 before_script:
   - ./configure
-  - echo "export GMOCK_HOME=/opt/gmock-1.7.0" >> ".localconfig/default"
+  - echo "export GMOCK_HOME=/home/travis/build/gunmetalbackupgooglecode/pdbparser/googlemock" >> ".localconfig/portable"
+  - echo "export GTEST_HOME=/home/travis/build/gunmetalbackupgooglecode/pdbparser/gtest" >> ".localconfig/portable"
   - ./configure portable
 
 script:
