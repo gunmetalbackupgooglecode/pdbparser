@@ -3,6 +3,7 @@ os: Unstable
 configuration: Release
 platform: x64
 before_build:
+- git submodule update --init
 - md build
 - cd build
 - cmake -G "Visual Studio 12 Win64" ..

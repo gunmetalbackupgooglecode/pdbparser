@@ -5,6 +5,7 @@ compiler:
 #  - clang
 
 before_install:
+  - git submodule update --init
   - sudo apt-get remove cmake --purge
   - sudo apt-get install expect
   - chmod +x installcmake.sh
