@@ -3,10 +3,19 @@ os: Unstable
 configuration: Release
 platform: x64
 before_build:
-- git submodule update --init
+- git clone https://github.com/gunmetalbackupgooglecode/googletest.git gtest
+- git clone https://github.com/gunmetalbackupgooglecode/googlemock.git googlemock
+- cd googlemock
+- cmake . -G "Visual Studio 12 Win64" -DBUILD_SHARED_LIBS=true
+- dir
+- cd ..
+- cd gtest
+- cmake . -G "Visual Studio 12 Win64" -DBUILD_SHARED_LIBS=true
+- dir
+- cd ..
 - md build
 - cd build
-- cmake -G "Visual Studio 12 Win64" ..
+- cmake -G "Visual Studio 12 Win64" -DGTEST_HOME="C:\projects\pdbparser\gtest" -GMOCK_HOME="C:\projects\pdbparser\googlemock" ..
 build:
   project: C:\projects\pdbparser\build\pdbparser.sln
   verbosity: minimal

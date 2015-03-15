@@ -4,6 +4,7 @@
 # GMOCK_LIBRARIES
 
 find_path(GMOCK_INCLUDE_DIR gmock/gmock.h
+    ${GMOCKDIR}/include
     $ENV{GMOCKDIR}/include
     $ENV{GMOCK_HOME}/include
     $ENV{PROGRAMFILES}/GMOCK/include
@@ -16,10 +17,12 @@ find_path(GMOCK_INCLUDE_DIR gmock/gmock.h
 find_library(GMOCK_LIBRARY
     NAMES gmock
     PATHS
+    ${GMOCKDIR}/lib
     $ENV{GMOCKDIR}/lib
     $ENV{GMOCKDIR}/lib/.libs
     $ENV{GMOCK_HOME}/lib
     $ENV{GMOCK_HOME}/lib/.libs
+    ${GMOCKDIR}
     $ENV{GMOCKDIR}
     $ENV{GMOCK_HOME}
     $ENV{GMOCKDIR}/Release
