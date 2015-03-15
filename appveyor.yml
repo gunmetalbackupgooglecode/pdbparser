@@ -8,14 +8,18 @@ before_build:
 - cd googlemock
 - cmake . -G "Visual Studio 12 Win64" -DBUILD_SHARED_LIBS=true
 - dir
+- msbuild gmock.sln
 - cd ..
 - cd gtest
 - cmake . -G "Visual Studio 12 Win64" -DBUILD_SHARED_LIBS=true
 - dir
+- msbuild gtest.sln
 - cd ..
 - md build
 - cd build
-- cmake -G "Visual Studio 12 Win64" -DGTEST_HOME="C:\projects\pdbparser\gtest" -GMOCK_HOME="C:\projects\pdbparser\googlemock" ..
+- SET GTEST_HOME=C:\projects\pdbparser\gtest
+- SET MOCK_HOME=C:\projects\pdbparser\googlemock
+- cmake -G "Visual Studio 12 Win64" ..
 build:
   project: C:\projects\pdbparser\build\pdbparser.sln
   verbosity: minimal
