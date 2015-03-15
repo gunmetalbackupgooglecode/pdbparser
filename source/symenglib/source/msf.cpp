@@ -8,10 +8,19 @@
  */
 
 #include "symenglib/msf.h"
+#include "symenglib/err.h"
 
-namespace symenglib
-{
-    
-    
+namespace symenglib {
 
+    void MSF::Open(std::string file) {
+
+    }
+    
+    void MSF::Open(char* file){
+    
+    }
+
+    void MSF::Close() {
+
+    }
 }
