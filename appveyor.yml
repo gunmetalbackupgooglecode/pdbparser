@@ -23,3 +23,6 @@ before_build:
 build:
   project: C:\projects\pdbparser\build\pdbparser.sln
   verbosity: minimal
+before_test:
+- cd C:\projects\pdbparser\build
+- dir
