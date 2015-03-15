@@ -7,8 +7,8 @@
  * xgreatx@gmail.com
  */
 
-#include "symenglib/msf.h"
-#include "symenglib/err.h"
+#include <msf.h>
+#include <err.h>
 
 namespace symenglib {
 

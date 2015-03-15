@@ -7,7 +7,5 @@
 * xgreatx@gmail.com
 */
 
-//#include <windows.h>
-//#include <common/assert.h>
 #include <stdio.h>
 

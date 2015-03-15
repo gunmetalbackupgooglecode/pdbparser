@@ -10,8 +10,7 @@
 */
 
 #include <stdio.h>
-#include <symenglib/msf.h>
-#include "symenglib/tpi.h"
-#include "symenglib/gsi.h"
-//#include "misc.h"
+#include <msf.h>
+#include <tpi.h>
+#include <gsi.h>
 

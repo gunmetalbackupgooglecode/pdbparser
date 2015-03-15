@@ -10,10 +10,10 @@
 //#include <windows.h>
 #include <stdio.h>
 //#include "misc.h"
-#include "symenglib/msf.h"
-#include "symenglib/tpi.h"
-#include "symenglib/gsi.h"
-#include "symenglib/pdb.h"
+#include <msf.h>
+#include <tpi.h>
+#include <gsi.h>
+#include <pdb.h>
 //#include <common/mapping.h>
 //#include <shlwapi.h>
 //#include <common/dbg.h>

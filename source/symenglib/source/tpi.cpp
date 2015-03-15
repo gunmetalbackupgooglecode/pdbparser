@@ -36,6 +36,6 @@
 */
 
 //#include <windows.h>
-#include "symenglib/tpi.h"
+#include <tpi.h>
 //#include "misc.h"
 

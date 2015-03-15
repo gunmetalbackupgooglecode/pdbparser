@@ -1,7 +1,7 @@
 #ifndef SYMENGLIB_MSF_H
 #define SYMENGLIB_MSF_H
 
-#include <symenglib/symenglib_api.h>
+#include "symenglib_api.h"
 #include <string>
 #include <types.h>
 

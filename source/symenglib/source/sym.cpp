@@ -9,8 +9,8 @@
 
 //#include <winsock2.h>
 //#include <ws2tcpip.h>
-#include "symenglib/sym.h"
-#include "symenglib/pdb.h"
+#include <sym.h>
+#include <pdb.h>
 //#include <common/list.h>
 //#include "misc.h"
 #include <stdio.h>
