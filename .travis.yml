@@ -5,7 +5,7 @@ compiler:
 #  - clang
 
 before_install:
-  - git submodule update --init
+  - pwd
   - sudo apt-get remove cmake --purge
   - sudo apt-get install expect
   - chmod +x installcmake.sh
@@ -13,9 +13,20 @@ before_install:
   - sudo ./installcmake.sh
   - ls /usr/cmake-3.2.1-Linux-x86_64
   - sudo ln -s /usr/cmake-3.2.1-Linux-x86_64/bin/cmake /usr/bin/cmake
+  - git clone https://github.com/gunmetalbackupgooglecode/googletest.git gtest
+  - git clone https://github.com/gunmetalbackupgooglecode/googlemock.git googlemock
+  - cd googlemock
+  - cmake . -DBUILD_SHARED_LIBS=true
+  - make
+  - cd ..
+  - cd googletest
+  - cmake . -DBUILD_SHARED_LIBS=true
+  - make
+  - cd ..
 
 before_script:
   - ./configure
+  - echo "export GMOCK_HOME=/opt/gmock-1.7.0" >> ".localconfig/default"
   - ./configure portable
 
 script:
