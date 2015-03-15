@@ -78,7 +78,6 @@ source_group_by_path(${source_path} "\\\\.cpp$|\\\\.c$|\\\\.h$|\\\\.hpp$"
 add_library(${target} ${api_includes} ${sources})
 
 target_link_libraries(${target} ${libs})
-cotire(${target})
 target_compile_options(${target} PRIVATE ${DEFAULT_COMPILE_FLAGS})
 
 set_target_properties(${target}
