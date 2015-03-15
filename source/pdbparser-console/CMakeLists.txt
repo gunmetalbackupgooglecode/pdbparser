@@ -48,7 +48,7 @@ set(sources
 add_executable(${target} ${sources})
 
 target_link_libraries(${target} ${libs})
-
+cotire(${target})
 target_compile_options(${target} PRIVATE ${DEFAULT_COMPILE_FLAGS})
 
 set_target_properties(${target}
