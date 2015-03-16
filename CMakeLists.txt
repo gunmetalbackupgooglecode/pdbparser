@@ -76,6 +76,8 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(X64 ON)
 endif()
 
+set(OPTION_ERRORS_AS_EXCEPTION ON)
+
 # Setup platform specifics (compile flags, etc., ...)
 
 # This policy was introduced in 3.0.0 and does not allow for COMPILER_DEFINITIONS_<Config>,
