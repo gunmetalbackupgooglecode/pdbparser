@@ -35,6 +35,7 @@ endif()
 
 set(sources
     main.cpp
+    firsh_test.cpp
 )
 
 
