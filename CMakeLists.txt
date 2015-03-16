@@ -157,7 +157,8 @@ endif()
 # "create_revision_file (...)" is defined in cmake/GitRevision.cmake
 create_revision_file(${CMAKE_BINARY_DIR}/revision ${INSTALL_ROOT})
 
-
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/filesfortests/testexe1/binaryfile/testexe1.exe DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/filesfortests/testexe1/binaryfile/testexe1.pdb DESTINATION ${CMAKE_BINARY_DIR})
 
 add_subdirectory(source)
 add_subdirectory(docs)
