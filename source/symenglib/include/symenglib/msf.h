@@ -2,17 +2,21 @@
 #define SYMENGLIB_MSF_H
 
 #include "symenglib_api.h"
+#include "err.h"
 #include <string>
 #include <types.h>
+#include <iostream>
+#include <fstream>
 
 namespace symenglib {
 
     class SYMENGLIB_API MSF {
     public:
         MSF() {}
-        void Open(std::string file);
-        void Open(char * file);
+        void Open(const std::string & file);
         void Close();
+    private:
+         std::fstream currentPdbFile;
     };
 }
 
