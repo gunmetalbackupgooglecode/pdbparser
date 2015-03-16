@@ -25,4 +25,4 @@ build:
   verbosity: minimal
 before_test:
 - cd C:\projects\pdbparser\build
-- dir
+- msbuild pdbparser.sln /t:test
