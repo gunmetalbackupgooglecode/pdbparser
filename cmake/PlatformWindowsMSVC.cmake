@@ -41,7 +41,7 @@ set(WIN32_COMPILE_FLAGS
 
       /W3           # -> warning level 3
     # /W4           # -> warning level 4
-      /WX           # -> treat warnings as errors
+    #  /WX           # -> treat warnings as errors
 
     # /MD           # -> runtime library: multithreaded dll
     # /MDd          # -> Runtime Library: Multithreaded Debug DLL
