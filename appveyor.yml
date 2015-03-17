@@ -19,7 +19,7 @@ before_build:
 - cd build
 - SET GTEST_HOME=C:\projects\pdbparser\gtest
 - SET GMOCK_HOME=C:\projects\pdbparser\googlemock
-- cmake -G "Visual Studio 12 Win64" ..
+- cmake -G "Visual Studio 12 Win64" -DCMAKE_BUILD_TYPE=Debug ..
 build:
   project: C:\projects\pdbparser\build\pdbparser.sln
   verbosity: minimal
