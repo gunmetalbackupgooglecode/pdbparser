@@ -35,7 +35,10 @@ if(OPTION_BUILD_TESTS AND GMOCK_FOUND AND GTEST_FOUND)
 
     # Target 'test'
     add_custom_target(test)
+    # HACK (tests no works on MSVC
+    if(NOT MSVC)
     set_target_properties(test PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD 1)
+    endif()
     # Tests
     add_test_without_ctest(symenglib-tests)
 
