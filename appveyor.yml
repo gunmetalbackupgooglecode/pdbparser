@@ -26,3 +26,5 @@ build:
 before_test:
 - cd C:\projects\pdbparser\build
 - dir
+- cd x64
+- dir
