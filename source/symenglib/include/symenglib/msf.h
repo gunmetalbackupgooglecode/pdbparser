@@ -14,6 +14,7 @@ namespace symenglib {
     public:
         MSF() {}
         void Open(const std::string & file);
+        void Open(const std::fstream & filestream);
         void Close();
     private:
          std::fstream currentPdbFile;
