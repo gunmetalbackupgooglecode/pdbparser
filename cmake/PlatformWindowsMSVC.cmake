@@ -106,6 +106,8 @@ set(DEFAULT_LINKER_FLAGS_RELEASE
     # DELAY:UNLOAD -> delay loaded dll: support unload
 )
 
+add_definitions(-DBOOST_ALL_DYN_LINK)
+
 
 # Add platform specific libraries for linking
 set(EXTRA_LIBS "")

@@ -67,6 +67,8 @@ include(cotire)
 # Include custom cmake functions
 include(cmake/Custom.cmake)
 include(cmake/GitRevision.cmake)
+# TODO fix this
+set(Boost_USE_STATIC_LIBS OFF)
 
 # Platform and architecture setup
 
@@ -90,6 +92,7 @@ if(POLICY CMP0043)
     cmake_policy(SET CMP0043 OLD)
 endif()
 
+find_package(Boost 1.55 COMPONENTS system filesystem program_options REQUIRED)
 
 if(MSVC)
     include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/PlatformWindowsMSVC.cmake)
@@ -104,6 +107,15 @@ elseif(UNIX AND CMAKE_COMPILER_IS_CLANGXX)
 else()
    message(WARNING "Unsupported platform/compiler combination")
 endif()
+
+# add include directory
+include_directories(
+  ${Boost_INCLUDE_DIRS}
+  )
+
+link_directories(
+  ${Boost_LIBRARY_DIRS}
+  )
 
 
 # Deployment/installation setup

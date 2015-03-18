@@ -77,7 +77,7 @@ source_group_by_path(${source_path} "\\\\.cpp$|\\\\.c$|\\\\.h$|\\\\.hpp$"
 
 add_library(${target} ${api_includes} ${sources})
 
-target_link_libraries(${target} ${libs})
+target_link_libraries(${target} ${libs} ${Boost_LIBRARIES})
 target_compile_options(${target} PRIVATE ${DEFAULT_COMPILE_FLAGS})
 
 set_target_properties(${target}
@@ -100,6 +100,13 @@ install(TARGETS ${target}
     LIBRARY DESTINATION ${INSTALL_SHARED}
     ARCHIVE DESTINATION ${INSTALL_LIB}
 )
+
+if (WIN32)
+  install(TARGETS Medusa RUNTIME DESTINATION .)
+  file(GLOB boost_system_dll     "${Boost_LIBRARY_DIRS}/boost_system-*-mt-1*.dll")
+  file(GLOB boost_filesystem_dll "${Boost_LIBRARY_DIRS}/boost_filesystem-*-mt-1*.dll")
+  install(FILES "${boost_system_dll}" "${boost_filesystem_dll}" DESTINATION .)
+endif ()
 
 # Header files
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/${target} DESTINATION ${INSTALL_INCLUDE})
