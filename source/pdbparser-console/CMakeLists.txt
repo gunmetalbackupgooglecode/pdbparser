@@ -39,7 +39,6 @@ endif()
 
 set(sources
     main.cpp
-    optionparser.h
 )
 
 
