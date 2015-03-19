@@ -2,6 +2,9 @@ version: 1.0.0.{build}
 os: Unstable
 configuration: Release
 platform: x64
+environment:
+  BOOST_ROOT: C:\Libraries\boost
+  BOOST_LIBRARYDIR: C:\Libraries\boost\lib64-msvc-12.0
 before_build:
 - git clone https://github.com/gunmetalbackupgooglecode/googletest.git gtest
 - git clone https://github.com/gunmetalbackupgooglecode/googlemock.git googlemock
